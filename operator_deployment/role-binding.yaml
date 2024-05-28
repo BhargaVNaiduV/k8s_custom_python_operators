@@ -1,0 +1,14 @@
+# role-binding.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: curljob-operator-rolebinding
+  namespace: default
+subjects:
+- kind: ServiceAccount
+  name: curljob-operator-sa
+  namespace: default
+roleRef:
+  kind: Role
+  name: curljob-operator-role
+  apiGroup: rbac.authorization.k8s.io

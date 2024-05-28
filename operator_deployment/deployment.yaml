@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: curljob-operator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: curljob-operator
+  template:
+    metadata:
+      labels:
+        app: curljob-operator
+    spec:
+      serviceAccountName: curljob-operator-sa
+      containers:
+      - name: operator
+        image: bhargavnaidu0498/publisher:latest
+        
