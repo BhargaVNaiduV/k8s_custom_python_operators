@@ -1,0 +1,6 @@
+apiVersion: example.com/v1
+kind: CurlJob
+metadata:
+  name: my-curljob
+spec:
+  url: "https://reqres.in/api/users/2"
