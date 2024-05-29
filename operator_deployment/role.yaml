@@ -6,7 +6,7 @@ metadata:
   name: curljob-operator-role
 rules:
 - apiGroups: [""]
-  resources: ["pods"]
+  resources: ["pods","curljobs"]
   verbs: ["create", "delete", "get", "list", "watch"]
 - apiGroups: [""]
   resources: ["pods/log"]
