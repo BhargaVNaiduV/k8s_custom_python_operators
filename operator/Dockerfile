@@ -14,4 +14,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Run operator.py when the container launches
-CMD ["python", "operator.py"]
+CMD ["python", "custom_operator.py"]
